@@ -7,13 +7,14 @@ body {
 
 .topIn {
   max-width: 33%;
-
+  padding: 10px;
 }
 
 .col {
   background-color: lightblue;
   border-radius: 25px;
-
+  max-width: 33%;
+  margin: 25px;
 }
 .col-md-9 {
   float: right;
@@ -21,10 +22,12 @@ body {
   width: auto;
 }
 .pizzaIn {
-  background-color: lightgray;
-  width: 250px;
+  background-color: lightblue;
   padding-left: 10px;
   border-radius: 25px;
+  margin-bottom: 15px;
+  max-width: 33%;
+  margin-left: 25px;
 }
 
 h3 {
