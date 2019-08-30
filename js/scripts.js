@@ -3,15 +3,18 @@
 
 //pizza constructor
 
-function Pizza([toppings], size) {
-  this.[toppings] = [toppings]
-  this.size       = size;
+function Pizza(toppings, size) {
+  this.toppings = []
+  this.size     = size;
 }
 
+//price prototype
 Pizza.prototype.price = function () {
-  if(size === 16) {
-    tex
+  if(size === "12-inch") {
+    this.pizza.text("15")
+  } else if (size === "16-inch") {
+    this.pizza.text("18")
+  } else if (size === "20-inch") {
+    this.pizza.text("22")
   }
 };
-
-this.price      = price;
