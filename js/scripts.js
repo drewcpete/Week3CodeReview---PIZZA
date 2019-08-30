@@ -10,13 +10,13 @@ function Pizza(toppings, size) {
 
 //price prototype
 Pizza.prototype.price = function () {
-  if(size === "12-inch") {
-    this.pizza.text("15")
-  } else if (size === "16-inch") {
-    this.pizza.text("18")
-  } else if (size === "20-inch") {
-    this.pizza.text("22")
-  }
+  if(this.size === "12-inch") {
+    this.price = "15"
+  } else if (this.size === "16-inch") {
+    this.price = "18"
+  } else if (this.size === "20-inch") {
+    this.price = "22"
+  };
 };
 
 /////////User Interface//////////
@@ -41,21 +41,37 @@ $(function(){
   // toppings input
   $("form.pizzaForm").submit(function(event) {
     event.preventDefault();
-    $("input:checkbox[name=pizzaForm]:checked").each(function() {
-      pizza.toppings = $(this).val();
+      var toppings = []
+      $("input:checkbox[name=pizzaForm]").each(function() {
+        if ($(this).is(":checked")) {
+          var top = ($(this).val());
+          toppings.push(top);
+        }
+
+
+      // pizza.toppings = $(this).val();
       console.log(pizza.toppings);
-      var toppings = pizza.toppings
-      $("#topOut").append(toppings + ", ");
+      console.log(toppings);
+      $("#topOut").text(toppings.length + " toppings");
     });
   });
+
+
+
   $("form.pizzaForm").submit(function(event){
     event.preventDefault();
     pizza.size = $("input:radio[name=pizzaSize]:checked").val();
-    console.log(pizSiz);
     var pizSiz = pizza.size;
-    console.log(pizza.size);
+    console.log(pizSiz);
     $("#sizeOut").text(pizSiz + " pizza");
+  });
+
+
+
+
+  $("#form.pizzaForm").submit(function(event) {
+    event.preventDefault();
+    pizza.price(pizSiz);
+    console.log(pizza.price);
   })
-
-
 });
