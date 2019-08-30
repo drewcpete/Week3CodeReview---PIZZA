@@ -10,17 +10,30 @@
   </head>
   <body>
 
-    <div class="pizzaIn">
-      <form class="pizzaForm" action="index.html" method="post">
-        <h3>Pizza Size</h3>
-        <label for="">Small</label>
-        <input type="radio" name="pizzaSize" value="12-inch" checked>
-        <label for="">Medium</label>
-        <input type="radio" name="pizzaSize" value="16-inch">
-        <label for="">Large</label>
-        <input type="radio" name="pizzaSize" value="20-inch">
-      </form>
-    </div>
+    <form class="pizzaForm" action="index.html" method="post">
+      <div class="pizzaIn">
+          <h3>Pizza Size</h3>
+          <label for="">Small</label>
+          <input type="radio" name="pizzaSize" value="12-inch" checked>
+          <label for="">Medium</label>
+          <input type="radio" name="pizzaSize" value="16-inch">
+          <label for="">Large</label>
+          <input type="radio" name="pizzaSize" value="20-inch">
+      </div>
+      <h3>Toppings:</h3>
+      <div class=" topIn form-group">
+          <input type="checkbox" name="pizzaForm" value="pepperoni"> Pepperoni<br>
+          <input type="checkbox" name="pizzaForm" value="pineapple">Pineapple<br>
+          <input type="checkbox" name="pizzaForm" value="onion">Onion<br>
+          <input type="checkbox" name="pizzaForm" value="olives">Black Olives<br>
+          <input type="checkbox" name="pizzaForm" value="bell peppers">Bell Peppers<br>
+          <input type="checkbox" name="pizzaForm" value="goat cheese">Goat Cheese<br>
+          <input type="checkbox" name="pizzaForm" value="fig">Figs<br>
+          <input type="checkbox" name="pizzaForm" value="prosciutto">Prosciutto<br>
+          <input type="checkbox" name="pizzaForm" value="banana peppers">Banana Peppers<br>
+          <input type="checkbox" name="wpizzaForm" value="balsamic reduction">Balsamic Reduction<br>
+        </div>
+    </form>
 
     <div class="pizzaOut">
       <p>Please confirm that you would like a <span id=sizeOut></span> with <span id="topOut"></span> for <span id="priceOut"></span></p>
