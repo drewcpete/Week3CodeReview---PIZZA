@@ -10,14 +10,14 @@ function Pizza(toppings, size, total) {
 }
 
 //price prototype
-Pizza.prototype.findTotal = function(total) {
-
+Pizza.prototype.findTotal = function() {
+  var price = 0
   if(this.size === "12") {
-    this.total = "15"
-  } else if (this.size === "16") {
-    this.total = "18"
-  } else if (this.size === "20") {
-    this.total = "22"
+    this.total = 15
+  } if (this.size === "16") {
+    this.total = 18
+  } if (this.size === "20") {
+    this.total = 22
   };
 };
 
@@ -36,7 +36,7 @@ $(function(){
         var top = ($(this).val());
         toppings.push(top);
       }
-    toppings.forEach($(".topOut").html("<li>" + toppings[i] + "</li>"); )
+    toppings.forEach($("#topOut").html("<li>" + toppings[i] + "</li>"));
 
     });
 
@@ -45,13 +45,13 @@ $(function(){
     var pizSiz = pizza.size;
     console.log(typeof(pizSiz));
     for
-    $(".sizeOut").text(pizSiz + "-inch pizza");
+    $("#sizeOut").text(pizSiz + "-inch pizza");
 
     // price
     var price = pizza.findTotal(pizza.size);
     console.log(price);
     console.log("the price should be = " + price);
-    $(".priceOut").text("$" + price)
+    $("span#priceOut").text("$" + price)
   });
 });
 
