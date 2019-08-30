@@ -38,37 +38,37 @@ $(function(){
   //   $("priceOut").text("large, 20-inch pizza");
   // });
 
-  // toppings input
+// toppings
   $("form.pizzaForm").submit(function(event) {
     event.preventDefault();
-      var toppings = []
-      $("input:checkbox[name=pizzaForm]").each(function() {
-        if ($(this).is(":checked")) {
-          var top = ($(this).val());
-          toppings.push(top);
-        }
-      console.log(toppings);
-      $("#topOut").text(toppings.length + " toppings");
+    var toppings = []
+    $("input:checkbox[name=pizzaForm]").each(function() {
+      if ($(this).is(":checked")) {
+        var top = ($(this).val());
+        toppings.push(top);
+      }
+    console.log(toppings);
+    $("#topOut").text(toppings.length + " toppings");
     });
-  });
+  // });
 
 
-
-  $("form.pizzaForm").submit(function(event){
-    event.preventDefault();
+// size
+  // $("form.pizzaForm").submit(function(event){
+  //   event.preventDefault();
     pizza.size = $("input:radio[name=pizzaSize]:checked").val();
     var pizSiz = pizza.size;
     // console.log(pizSiz);
     $("#sizeOut").text(pizSiz + " pizza");
-  });
+  // });
 
 
 
-
-  $("#form.pizzaForm").submit(function(event) {
-    event.preventDefault();
-    var price = pizza.price(pizza.size);
-    console.log(price);
+// price
+  // $("form.pizzaForm").submit(function(event) {
+  //   event.preventDefault();
+    var price = pizza.price();
+    console.log("the price should be = " + price);
     $("#priceOut").text("$" + price)
 
   });
