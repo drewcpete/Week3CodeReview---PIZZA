@@ -21,18 +21,34 @@ Pizza.prototype.price = function () {
 
 /////////User Interface//////////
 $(function(){
-  var pizza = new Pizza();
-  // pizza.price(size),
-  $("input:radio[value=12-inch]").click(function(){
-    $("priceOut").text("small, 12-inch pizza")
-  })
-  $("input:radio[value=16-inch]").click(function() {
-    $("priceOut").text("medium, 16-inch pizza")
-  })
-  $("input:radio[value=20-inch]").click(function() {
-    $("priceOut").text("large, 20-inch pizza")
-  })
 
+  /////////New Pizza Object//////////
+  var pizza = new Pizza();
+
+  /////////topping vars//////////
+  // var pep = {topping: "peperoni"}
+  // var pin = {topping: "pineapple"}
+  // var oni = {topping: "onion"}
+  // var oli = {topping: "black olives"}
+  // var bel = {topping: "bell peppers"}
+  // var ban = {topping: "banana peppers"}
+  // var fig = {topping: "figs"}
+  // var bal = {topping: "balsamic reduction"}
+  // var pro = {topping: "prosciutto"}
+  // var goa = {topping: "goat cheese"}
+
+  // pizza.price(size),
+  $("input:radio[value=12-inch]").submit(function(event){
+    $("priceOut").text("small, 12-inch pizza");
+  });
+  $("input:radio[value=16-inch]").submit(function() {
+    $("priceOut").text("medium, 16-inch pizza");
+  });
+  $("input:radio[value=20-inch]").submit(function() {
+    $("priceOut").text("large, 20-inch pizza");
+  });
+  // toppings input
+  $("form.pizzaForm")
 
 
 });
