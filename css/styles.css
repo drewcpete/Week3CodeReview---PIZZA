@@ -2,6 +2,7 @@ body {
   background-image: url(../img/cutepizza.png);
   color: Black;
   text-shadow: 3px, 3px, 0px, black;
+  margin-left: 20px;
 }
 
 .topIn {
@@ -9,6 +10,16 @@ body {
 
 }
 
+.col {
+  background-color: lightblue;
+  border-radius: 25px;
+
+}
+.col-md-9 {
+  float: right;
+  margin-right: 15%;
+  width: auto;
+}
 .pizzaIn {
   background-color: lightgray;
   width: 250px;
