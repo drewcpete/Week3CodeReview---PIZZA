@@ -1,6 +1,12 @@
 body {
   background-image: url(../img/cutepizza.png);
-  /* background-color: darkgray; */
+  color: Black;
+  text-shadow: 3px, 3px, 0px, black;
+}
+
+.topIn {
+  max-width: 33%;
+
 }
 
 .pizzaIn {
@@ -16,7 +22,9 @@ h3 {
 
 .jumbotron {
   text-align: center;
-  /* max-width:%; */
-  margin-left: 33%;
-  margin-right: 33%;
+  background-image: linear-gradient(to right top, #906c4f, #9d6742, #ab5f36, #b9562e, #c84829, #c6541e, #c25f11, #bd6a00, #a08602, #809b33, #5eab61, #3ab791);
+  margin-left: auto;
+  margin-right: auto;
+  width: 420px;
+  
 }
