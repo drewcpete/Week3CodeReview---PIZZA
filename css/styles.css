@@ -1,0 +1,22 @@
+body {
+  background-image: url(../img/cutepizza.png);
+  /* background-color: darkgray; */
+}
+
+.pizzaIn {
+  background-color: lightgray;
+  width: 250px;
+  padding-left: 10px;
+  border-radius: 25px;
+}
+
+h3 {
+   text-align: center;
+ }
+
+.jumbotron {
+  text-align: center;
+  /* max-width:%; */
+  margin-left: 33%;
+  margin-right: 33%;
+}

@@ -3,19 +3,20 @@
 
 //pizza constructor
 
-function Pizza(toppings, size) {
+function Pizza(toppings, size, total) {
   this.toppings = []
   this.size     = size;
+  this.total    = 0
 }
 
 //price prototype
-Pizza.prototype.total = function(total) {
+Pizza.prototype.findTotal = function(total) {
 
-  if(this.size == "12") {
+  if(this.size === "12") {
     this.total = "15"
-  } else if (this.size == "16") {
+  } else if (this.size === "16") {
     this.total = "18"
-  } else if (this.size == "20") {
+  } else if (this.size === "20") {
     this.total = "22"
   };
 };
@@ -35,7 +36,7 @@ $(function(){
         var top = ($(this).val());
         toppings.push(top);
       }
-    console.log(toppings);
+    // console.log(toppings);
     $("#topOut").text(toppings.length + " toppings");
     });
 
@@ -46,8 +47,8 @@ $(function(){
     $("#sizeOut").text(pizSiz + "-inch pizza");
 
     // price
-    var price = pizza.total(pizSiz);
-    console.log(typeof(price));
+    var price = pizza.findTotal(pizza.size);
+    console.log(price);
     console.log("the price should be = " + price);
     $("#priceOut").text("$" + price)
   });
