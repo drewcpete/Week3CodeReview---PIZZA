@@ -9,14 +9,14 @@ function Pizza(toppings, size) {
 }
 
 //price prototype
-Pizza.prototype.price = function (cost) {
+Pizza.prototype.total = function(total) {
 
-  if(this.size === "12") {
-    this.price = "15"
-  } else if (this.size === "16") {
-    this.price = "18"
-  } else if (this.size === "20") {
-    this.price = "22"
+  if(this.size == "12") {
+    this.total = "15"
+  } else if (this.size == "16") {
+    this.total = "18"
+  } else if (this.size == "20") {
+    this.total = "22"
   };
 };
 
@@ -45,10 +45,11 @@ $(function(){
     console.log(typeof(pizSiz));
     $("#sizeOut").text(pizSiz + "-inch pizza");
 
-// price
-    var cost = pizza.price(pizza.size);
-    console.log("the price should be = " + cost);
-    $("#priceOut").text("$" + cost)
+    // price
+    var price = pizza.total(pizSiz);
+    console.log(typeof(price));
+    console.log("the price should be = " + price);
+    $("#priceOut").text("$" + price)
   });
 });
 
