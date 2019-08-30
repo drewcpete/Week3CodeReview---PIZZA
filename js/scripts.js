@@ -25,17 +25,6 @@ $(function(){
   /////////New Pizza Object//////////
   var pizza = new Pizza();
 
-  /////////topping vars//////////
-  // var pep = {topping: "peperoni"}
-  // var pin = {topping: "pineapple"}
-  // var oni = {topping: "onion"}
-  // var oli = {topping: "black olives"}
-  // var bel = {topping: "bell peppers"}
-  // var ban = {topping: "banana peppers"}
-  // var fig = {topping: "figs"}
-  // var bal = {topping: "balsamic reduction"}
-  // var pro = {topping: "prosciutto"}
-  // var goa = {topping: "goat cheese"}
 
   // pizza.price(size),
 
@@ -52,13 +41,20 @@ $(function(){
   // toppings input
   $("form.pizzaForm").submit(function(event) {
     event.preventDefault();
-    $("input:checkbox[name=pizzaForm]:checked").each(function(){
+    $("input:checkbox[name=pizzaForm]:checked").each(function() {
       pizza.toppings = $(this).val();
       console.log(pizza.toppings);
       var toppings = pizza.toppings
-      // toppings = toppings.join(", ");
       $("#topOut").append(toppings + ", ");
-    })
+    });
+  });
+  $("form.pizzaForm").submit(function(event){
+    event.preventDefault();
+    pizza.size = $("input:radio[name=pizzaSize]:checked").val();
+    console.log(pizSiz);
+    var pizSiz = pizza.size;
+    console.log(pizza.size);
+    $("#sizeOut").text(pizSiz + " pizza");
   })
 
 
