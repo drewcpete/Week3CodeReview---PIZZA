@@ -38,17 +38,28 @@ $(function(){
   // var goa = {topping: "goat cheese"}
 
   // pizza.price(size),
-  $("input:radio[value=12-inch]").submit(function(event){
-    $("priceOut").text("small, 12-inch pizza");
-  });
-  $("input:radio[value=16-inch]").submit(function() {
-    $("priceOut").text("medium, 16-inch pizza");
-  });
-  $("input:radio[value=20-inch]").submit(function() {
-    $("priceOut").text("large, 20-inch pizza");
-  });
+
+  // $("input:radio[value=12-inch]").submit(function(event){
+  //   $("priceOut").text("small, 12-inch pizza");
+  // });
+  // $("input:radio[value=16-inch]").submit(function() {
+  //   $("priceOut").text("medium, 16-inch pizza");
+  // });
+  // $("input:radio[value=20-inch]").submit(function() {
+  //   $("priceOut").text("large, 20-inch pizza");
+  // });
+
   // toppings input
-  $("form.pizzaForm")
+  $("form.pizzaForm").submit(function(event) {
+    event.preventDefault();
+    $("input:checkbox[name=pizzaForm]:checked").each(function(){
+      pizza.toppings = $(this).val();
+      console.log(pizza.toppings);
+      var toppings = pizza.toppings
+      // toppings = toppings.join(", ");
+      $("#topOut").append(toppings + ", ");
+    })
+  })
 
 
 });
