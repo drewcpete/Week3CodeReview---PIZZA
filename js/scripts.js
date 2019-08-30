@@ -47,10 +47,6 @@ $(function(){
           var top = ($(this).val());
           toppings.push(top);
         }
-
-
-      // pizza.toppings = $(this).val();
-      console.log(pizza.toppings);
       console.log(toppings);
       $("#topOut").text(toppings.length + " toppings");
     });
@@ -62,7 +58,7 @@ $(function(){
     event.preventDefault();
     pizza.size = $("input:radio[name=pizzaSize]:checked").val();
     var pizSiz = pizza.size;
-    console.log(pizSiz);
+    // console.log(pizSiz);
     $("#sizeOut").text(pizSiz + " pizza");
   });
 
@@ -71,7 +67,9 @@ $(function(){
 
   $("#form.pizzaForm").submit(function(event) {
     event.preventDefault();
-    pizza.price(pizSiz);
-    console.log(pizza.price);
-  })
+    var price = pizza.price(pizza.size);
+    console.log(price);
+    $("#priceOut").text("$" + price)
+
+  });
 });
