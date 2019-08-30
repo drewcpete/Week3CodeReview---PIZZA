@@ -36,21 +36,22 @@ $(function(){
         var top = ($(this).val());
         toppings.push(top);
       }
-    // console.log(toppings);
-    $("#topOut").text(toppings.length + " toppings");
+    toppings.forEach($(".topOut").html("<li>" + toppings[i] + "</li>"); )
+
     });
 
 // size
     pizza.size = $("input:radio[name=pizzaSize]:checked").val();
     var pizSiz = pizza.size;
     console.log(typeof(pizSiz));
-    $("#sizeOut").text(pizSiz + "-inch pizza");
+    for
+    $(".sizeOut").text(pizSiz + "-inch pizza");
 
     // price
     var price = pizza.findTotal(pizza.size);
     console.log(price);
     console.log("the price should be = " + price);
-    $("#priceOut").text("$" + price)
+    $(".priceOut").text("$" + price)
   });
 });
 
