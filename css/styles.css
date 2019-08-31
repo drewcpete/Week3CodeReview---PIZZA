@@ -4,7 +4,9 @@ body {
   text-shadow: 3px, 3px, 0px, black;
   margin-left: 20px;
 }
-
+.pizzaOut {
+  display: none;
+}
 .topIn {
   max-width: 33%;
   padding: 10px;
