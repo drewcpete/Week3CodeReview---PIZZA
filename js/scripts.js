@@ -5,47 +5,58 @@
 
 function Pizza(toppings, size, total) {
   this.toppings = []
-  this.size     = size;
-  this.total    = 0
+  this.size = size;
+  this.total = 0
 }
 
 //price prototype
 Pizza.prototype.findTotal = function() {
   var price = 0
-  if(this.size === "12") {
+  if (this.size === "12") {
     this.total = 15
-  } if (this.size === "16") {
+  }
+  if (this.size === "16") {
     this.total = 18
-  } if (this.size === "20") {
+  }
+  if (this.size === "20") {
     this.total = 22
   };
+  this.total += this.toppings.length * 1.5
 };
 
-/////////User Interface//////////
-$(function(){
+function makeUL(toppings)
+for (var i = 0; i < toppings.length; i++) {
+  var topul = document.createElement("ul");
+  var top = document.createElement("li");
+  top.appendChild.document.createTextNode(toppings[i]);
+  topul.appendChild(top);
+  $("#topList").
 
-  /////////New Pizza Object//////////
-  var pizza = new Pizza();
+  /////////User Interface//////////
+  $(function() {
 
-// toppings
-  $("form.pizzaForm").submit(function(event) {
-    event.preventDefault();
-    var toppings = []
-    $("input:checkbox[name=pizzaForm]").each(function() {
-      if ($(this).is(":checked")) {
-        var top = ($(this).val());
-        toppings.push(top);
+    /////////New Pizza Object//////////
+    var pizza = new Pizza();
+
+    // toppings
+    $("form.pizzaForm").submit(function(event) {
+      event.preventDefault();
+      var toppings = []
+      $("input:checkbox[name=pizzaForm]").each(function() {
+          if ($(this).is(":checked")) {
+            var top = ($(this).val());
+            toppings.push(top);
+            $("#topOut").text(toppings.length)
+            $("#topList").append(toppings.forEach()))
+        }
       }
-    toppings.forEach($("#topOut").html("<li>" + toppings[i] + "</li>"));
-
     });
 
-// size
+    // size
     pizza.size = $("input:radio[name=pizzaSize]:checked").val();
     var pizSiz = pizza.size;
     console.log(typeof(pizSiz));
-    for
-    $("#sizeOut").text(pizSiz + "-inch pizza");
+    $("span#sizeOut").text(pizSiz + "-inch pizza");
 
     // price
     var price = pizza.findTotal(pizza.size);
@@ -63,27 +74,12 @@ $(function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // $("input:radio[value=12-inch]").submit(function(event){
-  //   $("priceOut").text("small, 12-inch pizza");
-  // });
-  // $("input:radio[value=16-inch]").submit(function() {
-    //   $("priceOut").text("medium, 16-inch pizza");
-    // });
-    // $("input:radio[value=20-inch]").submit(function() {
-      //   $("priceOut").text("large, 20-inch pizza");
-      // });
+//   $("priceOut").text("small, 12-inch pizza");
+// });
+// $("input:radio[value=16-inch]").submit(function() {
+//   $("priceOut").text("medium, 16-inch pizza");
+// });
+// $("input:radio[value=20-inch]").submit(function() {
+//   $("priceOut").text("large, 20-inch pizza");
+// });
