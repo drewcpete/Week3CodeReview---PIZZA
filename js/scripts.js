@@ -20,14 +20,22 @@ Pizza.prototype.findTotal = function() {
 };
 
 
+Pizza.prototype.listToppings = function() {
+  this.toppings.forEach
+}
+
+// Pizza.prototype.listToppings = function() {
+//   for(var i =0; i<this.toppings.length; i++) {
+//
+//   }
 
 /////////User Interface//////////
 $(function() {
   $("form.pizzaForm").submit(function(event) {
     event.preventDefault();
     var pizza = new Pizza();
-    $(".pizzaOut").fadeIn();
     var toppings = pizza.toppings;
+    $(".pizzaOut").fadeIn();
     $("input:checkbox[name=pizzaForm]").each(function() {
       if ($(this).is(":checked")) {
         var top = ($(this).val());
@@ -39,11 +47,13 @@ $(function() {
         }
       };
     });
-    $("#topList").append("<li>" + toppings.child + "</li>")
+
+    $("#topList").append()
     pizza.size = $("input:radio[name=pizzaSize]:checked").val();
     var pizSiz = pizza.size;
     $("span#sizeOut").text(pizSiz + "-inch pizza");
     var price = pizza.findTotal();
     $("span#priceOut").text("$" + price)
+
   });
 });
