@@ -21,13 +21,10 @@ Pizza.prototype.findTotal = function() {
 
 
 Pizza.prototype.listToppings = function() {
-  this.toppings.forEach
+  for (var i = 0; i < this.toppings.length; i++) {
+    this.toppings[i].append("<li>" + i + "</li>")
+  }
 }
-
-// Pizza.prototype.listToppings = function() {
-//   for(var i =0; i<this.toppings.length; i++) {
-//
-//   }
 
 /////////User Interface//////////
 $(function() {
@@ -48,7 +45,8 @@ $(function() {
       };
     });
 
-    $("#topList").append()
+    $("#topList").html(pizza.listToppings)
+    console.log(toppings);
     pizza.size = $("input:radio[name=pizzaSize]:checked").val();
     var pizSiz = pizza.size;
     $("span#sizeOut").text(pizSiz + "-inch pizza");
