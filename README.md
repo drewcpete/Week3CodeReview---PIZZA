@@ -4,25 +4,28 @@
 
 ### Description
 
-#### This website is a fake pizzaria that lets you pick the size of your pizza and what toppings you'd like.
+This website is a fake pizzeria that lets you pick the size of your pizza and what toppings you'd like.
 
 ### Specs
-##### Select size with radio buttons
-##### Sizes effect the total priceOut
-##### Pick Toppings using checkboxes
-##### The amount of toppings is reflected in the price
+| Behavior | Input | Output |
+|----------|-------|--------|
+| User Selected Large | Large pizza button selected | base price is $20 |
+| User selected 3 toppings | Pepperoni, pineapple and figs were selected| Price increases $4.50|
+* Final price of pizza and amount of toppings is displayed
+* List of ingredients is displayed
+
 
 ### Setup
-#### Clone the repository from https://github.com/drewcpete/pizza-CR.  Open index.html.
+Clone the repository from https://github.com/drewcpete/pizza-CR.  Open index.html.
 
 ### Tech
-#### HTML
-#### JavaScript
-#### CSS
-#### Bootstrap
-#### jQuery
+* HTML
+* JavaScript
+* CSS
+* Bootstrap
+* jQuery
 
 ### Contact
-#### drewcpete@gmail.com
+You can reach me at drewcpete@gmail.com with any questions or concerns!
 
 ## Copyright under MIT open source
